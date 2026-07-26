@@ -17,8 +17,7 @@ class Solution(object):
                 
             while busy_servers and busy_servers[0][0] <= curr_time:
                 free_t, w, idx = heapq.heappop(busy_servers)
-                heapq.heappush(free_servers, (w, idx))
-                
+                heapq.heappush(free_servers, (w, idx))  
             w, idx = heapq.heappop(free_servers)
             ans.append(idx)
             heapq.heappush(busy_servers, (curr_time + task_time, w, idx))
