@@ -13,8 +13,7 @@ class Solution(object):
                 return
 
             for count in range(3):
-                dfs(idx + 1, current_cost + toppingCosts[idx] * count)
-
+                dfs(idx + 1, current_cost + toppingCosts[idx]*count)
         for base in baseCosts:
             dfs(0, base)
 
