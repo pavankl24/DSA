@@ -1,5 +1,5 @@
-class Solution:
-    def numberOfStableArrays(self, zero: int, one: int, limit: int) -> int:
+class Solution(object):
+    def numberOfStableArrays(self, zero, one, limit):
         MOD = 10**9 + 7
         
         dp0 = [[0] * (one + 1) for _ in range(zero + 1)]
