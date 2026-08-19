@@ -4,7 +4,7 @@ class Solution:
     def diffWaysToCompute(self, expression):
         memo = {}
         
-        def compute(expr: str) -> List[int]:
+        def compute(expr):
             if expr in memo:
                 return memo[expr]
             
